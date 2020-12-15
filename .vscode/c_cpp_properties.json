@@ -3,7 +3,16 @@
         {
             "name": "Win32",
             "includePath": [
-                "${default}"
+                "${default}",
+                "${workspaceFolder}",
+                "${workspaceFolder}\\*",
+                "${workspaceFolder}\\**",
+                "D:\\Program Files\\mingw64\\include",
+                "D:\\Program Files\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include",
+                "D:\\Program Files\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include\\c++",
+                "D:\\Program Files\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include\\c++\\x86_64-w64-mingw32",
+                "D:\\Program Files\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include\\c++\\backward",
+                "D:\\Program Files\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include-fixed"
             ],
             "defines": [
                 "_DEBUG",
@@ -11,7 +20,15 @@
                 "_UNICODE"
             ],
             "compilerPath": "D:\\Program Files\\mingw64\\bin\\gcc.exe",
-            "cStandard": "gnu11"
+            "cStandard": "gnu11",
+            "cppStandard": "c++11",
+            "browse": {
+                "path": [
+                    "D:\\Program Files\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include",
+                    "D:\\Program Files\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include-fixed",
+                    "D:\\Program Files\\mingw64\\include\\*"
+                ]
+            }
         }
     ],
     "version": 4

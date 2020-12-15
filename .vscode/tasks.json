@@ -7,6 +7,7 @@
             "args": [
                 "-g",
                 "${file}",
+                "-std=c11",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],

@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
-
 using namespace std;
 
 typedef struct node
@@ -16,48 +15,43 @@ typedef struct node
     }
 }node;
 
-bool myCmp(pair<int, int> a, pair<int, int> b)
+bool mycmp(pair<int, int> a, pair<int, int> b)
 {
     return a.second < b.second;
 }
 
 int main()
 {
-    int n, X, Y;
-    cin >> n >> X >> Y;
+    int n, x, y;
+    cin >> n >> x >> y;
     vector<node> location(n);
     int num = 1;
-    int x, y;
     for(vector<node>::iterator iter = location.begin(); iter != location.end(); iter++)
     {
         cin >> x >> y;
-        iter->x = x - X;
-        iter->y = y - Y;
+        iter->x = x - x;
+        iter->y = y - y;
         iter->num = num++;
     }
-    vector< pair<int, int> > distanceMin(3);
+    vector< pair<int, int> > distancemin(3);
     for(int i  = 0; i < 3; i++)
     {
-        distanceMin[i].first = location[i].num;
-        distanceMin[i].second = location[i].length();
+        distancemin[i].first = location[i].num;
+        distancemin[i].second = location[i].length();
     }
-    
-    sort(distanceMin.begin(), distanceMin.end(), myCmp);
-
+    sort(distancemin.begin(), distancemin.end(), mycmp);
     for(int i = 4; i < n; i++)
     {
-        if(location[i].length() < distanceMin[2].second)
+        if(location[i].length() < distancemin[2].second)
         {
-            distanceMin[2].first = location[i].num;
-            distanceMin[2].second = location[i].length();
+            distancemin[2].first = location[i].num;
+            distancemin[2].second = location[i].length();
         }
-        sort(distanceMin.begin(), distanceMin.end(), myCmp);
+        sort(distancemin.begin(), distancemin.end(), mycmp);
     }
-
     for(int i  = 0; i < 3; i++)
     {
-        cout << distanceMin[i].first << endl;
+        cout << distancemin[i].first << endl;
     }
-
     return 0;
 }
