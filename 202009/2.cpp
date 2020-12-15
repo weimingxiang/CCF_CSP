@@ -5,9 +5,13 @@ using namespace std;
 
 int main()
 {
-    int v1 = 1;
+    int n, k ,t, xl, yd, xr, yu;
 
-    cin >> v1;
-    cout << v1 << endl;
+    cin >> n >> k >> t >> xl >> yd >> xr >> yu;
+    vector<vector<pair<int, int>>> all_user(n);
+    for (int i = 0; i < n; i++)
+    {
+
+    }
     return 0;
 }
